@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title_block %}{{ Home }}{% endblock %}
+
+{% block body_block %}
+
+
+
+    <!-- start banner Area -->
+    <section class="banner-area relative about-banner" id="home">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content col-lg-12">
+                    <h1 class="text-white">
+                        Contact Us
+                    </h1>
+                    <p class="text-white link-nav"><a href="index.html">Home </a> <span
+                            class="lnr lnr-arrow-right"></span> <a href="contact.html"> Contact Us</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{#  =============== end banner area =================#}
+
+    <div class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.3742131317017!2d90.39075291434816!3d23.734031395319754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8c1ef1cf437%3A0xa268523b59dae27b!2sDepartment%20of%20Criminology!5e0!3m2!1sen!2sbd!4v1625157009223!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Start contact-page Area -->
+			<section class="contact-page-area section-gap">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-lg-4 d-flex flex-column address-wrap">
+
+							<div class="single-contact-address d-flex flex-row">
+								<div class="icon">
+									<span class="lnr lnr-home"></span>
+								</div>
+								<div class="contact-details">
+									<h5>University of Dhaka</h5>
+									<p>
+										Bangaladesh Dhaka
+									</p>
+								</div>
+							</div>
+							<div class="single-contact-address d-flex flex-row">
+								<div class="icon">
+									<span class="lnr lnr-phone-handset"></span>
+								</div>
+								<div class="contact-details">
+									<h5>00 (958) 9865 562</h5>
+									<p>Mon to Fri 9am to 6 pm</p>
+								</div>
+							</div>
+							<div class="single-contact-address d-flex flex-row">
+								<div class="icon">
+									<span class="lnr lnr-envelope"></span>
+								</div>
+								<div class="contact-details">
+									<h5>criminology@du.ac.bd</h5>
+									<p>Send us your query anytime!</p>
+								</div>
+							</div>
+						</div>
+                        <hr>
+						<div class="col-lg-8">
+                              <div class="contact-form">
+                        <div id="success"></div>
+
+                         <form  action="{% url 'Criminology_App:contact' %}" method="POST" name="sentMessage" id="contactForm" novalidate="novalidate">
+                             {% csrf_token %}
+
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control " id="message" name="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message">{{message}}</textarea>
+
+                                <p class="help-block"></p>
+                            </div>
+
+                            <div>
+
+                                <button class="btn btn-info" type="submit" id="sendMessageButton">Send Message</button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+                        </div>
+			</section>
+			<!-- End contact-page Area -->
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}{{ Home }}{% endblock %}
+
+{% block body_block %}
+
+     <!-- start banner Area -->
+    <section class="banner-area relative about-banner" id="home">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content col-lg-12">
+                    <h1 class="text-white">
+                        M.S.S Syllabus
+                    </h1>
+                    <p class="text-white link-nav"><a href="{% url 'Criminology_App:index' %}">Home </a> <span
+                            class="lnr lnr-arrow-right"></span> <a href="{% url 'Criminology_App:about' %}"> About Us</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End banner Area -->
+
+<section class="syllabus_bss">
+        <div class="container mt-5 mb-5">
+            {% for x in mss_syllabus %}
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Syllabus updated January M.S.S <a target="_blank" href="{{ x.syllabus_file.url }}">
+                            <button
+                                    class="btn btn-info btn-sm">download
+                            </button>
+                        </a>.
+                        </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+</section>
+
+
+{% endblock %}

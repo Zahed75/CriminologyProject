@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title_block %}{{ Home }}{% endblock %}
+
+{% block body_block %}
+
+
+			<!-- start banner Area -->
+			<section class="banner-area relative about-banner" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">				
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Event Details			
+							</h1>	
+							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="event-details.html"> Event Details</a></p>
+						</div>	
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->	
+				
+			<!-- Start event-details Area -->
+			<section class="event-details-area section-gap">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-lg-8 event-details-left">
+							<div class="main-img">
+								<img class="img-fluid" src="{{ single_event.events_img}}" alt="">
+							</div>
+							<div class="details-content">
+								<a href="#">
+									<h4>{{ event_info.event_title|safe }}</h4>
+								</a>
+								<p>
+									{{single_event.events_details|safe}}
+								</p>
+
+							</div>
+							<div class="social-nav row no-gutters">
+								<div class="col-lg-6 col-md-6 ">
+
+								</div>
+{#								<div class="col-lg-6 col-md-6 navs">#}
+{#									<a href="#" class="nav-prev"><span class="lnr lnr-arrow-left"></span>Prev Event</a>#}
+{#									<a href="#" class="nav-next">Next Event<span class="lnr lnr-arrow-right"></span></a>									#}
+{#								</div>#}
+							</div>
+						</div>
+						<div class="col-lg-4 event-details-right">
+							<div class="single-event-details">
+								<h4>Details</h4>
+								<ul class="mt-10">
+									<li class="justify-content-between d-flex">
+										<span>{{ event_info.start_date|safe }}</span>
+										<span>{{ event_info.end_date|safe }}</span>
+									</li>
+									<li class="justify-content-between d-flex">
+										<span>End date</span>
+										<span>{{ event_info.end_date|safe }}</span>
+									</li>
+									<li class="justify-content-between d-flex">
+										<span>Ticket Price</span>
+										<span>{{ event_info.ticket_Price|safe }}</span>
+									</li>														
+								</ul>
+							</div>
+							<div class="single-event-details">
+								<h4>Venue</h4>
+								<ul class="mt-10">
+									<li class="justify-content-between d-flex">
+										<span>Place</span>
+										<span>{{ event_info.place|safe }}</span>
+									</li>
+									<li class="justify-content-between d-flex">
+										<span>Street::</span>
+										<span>{{ event_info.street|safe }}</span>
+									</li>
+									<li class="justify-content-between d-flex">
+										<span>City</span>
+										<span>{{ event_info.city|safe }}</span>
+									</li>														
+								</ul>
+							</div>
+							<div class="single-event-details">
+								<h4>Organiser</h4>
+								<ul class="mt-10">
+									<li class="justify-content-between d-flex">
+										<span>Company</span>
+										<span>{{ event_info.organiser|safe }}</span>
+									</li>
+
+								</ul>
+							</div>														
+						</div>
+					</div>
+
+				</div>	
+			</section>
+			<!-- End event-details Area -->
+					
+				
+
+
+
+{% endblock %}

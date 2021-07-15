@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}{{ Research_publication }}{% endblock %}
+
+{% block body_block %}
+
+    <!-- start banner Area -->
+    <section class="banner-area relative about-banner" id="home">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content col-lg-12">
+                    <h1 class="text-white">
+                        Research & Publication
+                    </h1>
+                    <p class="text-white link-nav"><a href="index.html">Home </a> <span
+                            class="lnr lnr-arrow-right"></span> <a href=""> Publication Details.</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End banner Area -->
+
+
+    <!-- Start event-details Area -->
+    <section class="event-details-area section-gap">
+
+        <div class="container">
+
+            <div class="row">
+
+                    <div class="rs-img">
+                        <img  style="width: 760px; height: 320px;" src="{% static 'img/gallery/n.jpg' %}" alt="">
+                    </div>
+                <div class="col-lg-12 event-details-left">
+                    <br>
+                    <h4>Past Research Projects:</h4>
+                    <hr>
+                    {% for x in rp %}
+                        <div class="researchtxt">
+                            <div class="details-content ">
+                                <h3> {{ x.research_title|safe }}</h3>
+                                <p>
+                                    {{ x.research_details|safe }}
+                                </p>
+
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+    <!-- End event-details Area -->
+
+
+{% endblock %}

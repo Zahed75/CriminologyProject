@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title_block %}{{ Home }}{% endblock %}
+
+{% block body_block %}
+
+    <!-- End banner Area -->
+
+    <!-- Start gallery Area -->
+			<section class="gallery-area section-gap">
+                {% for x in img %}
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-7">
+							<a href="{{ x.img_one.url }}" class="img-gal">
+								<div class="single-imgs relative">
+									<div class="overlay overlay-bg"></div>
+									<div class="relative">
+										<img class="img-fluid" src="{{ x.img_one.url }}" alt="">
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-5">
+							<a href="{{ x.img_two.url }}" class="img-gal">
+								<div class="single-imgs relative">
+									<div class="overlay overlay-bg"></div>
+									<div class="relative">
+										<img class="img-fluid" src="{{ x.img_two.url }}" alt="">
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-4">
+							<a href="{{ x.img_three.url }}" class="img-gal">
+								<div class="single-imgs relative">
+									<div class="overlay overlay-bg"></div>
+									<div class="relative">
+										<img class="img-fluid" src="{{ x.img_three.url }}" alt="">
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-4">
+							<a href="{{ x.img_four.url }}" class="img-gal">
+								<div class="single-imgs relative">
+									<div class="overlay overlay-bg"></div>
+									<div class="relative">
+										<img class="img-fluid" src="{{ x.img_four.url }}" alt="">
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-4">
+							<a href="{{ x.img_five.url }}"  class="img-gal">
+								<div class="single-imgs relative">
+									<div class="overlay overlay-bg"></div>
+									<div class="relative">
+										<img class="img-fluid" src="{{ x.img_five.url }}" alt="">
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-5">
+							<a href="{{ x.img_six.url }}" class="img-gal">
+								<div class="single-imgs relative">
+									<div class="overlay overlay-bg"></div>
+									<div class="relative">
+										<img class="img-fluid" src="{{ x.img_six.url }}" alt="">
+									</div>
+								</div>
+							 </a>
+						</div>
+						<div class="col-lg-7">
+							<a href="{{ x.img_seven.url }}" class="img-gal">
+								<div class="single-imgs relative">
+									<div class="overlay overlay-bg"></div>
+									<div  class="relative">
+										<img class="img-fluid" src="{{ x.img_seven.url }}" alt="">
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+            {% endfor %}
+			</section>
+			<!-- End gallery Area -->
+
+
+
+{% endblock %}
+

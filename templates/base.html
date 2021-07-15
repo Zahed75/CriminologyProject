@@ -1,0 +1,297 @@
+{% load staticfiles %}
+{% block title_block %}Department of Criminology{% endblock %}
+
+
+<html lang="zxx" class="no-js">
+
+<head>
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/du_logo.png' %}">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{% static 'img/fav.png' %}">
+    <!-- Author Meta -->
+
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Department of Criminology </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+            CSS
+            ============================================= -->
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/linearicons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+<header id="header" id="home">
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 col-8 header-top-left no-padding">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
+                    <a href="tel:+953 012 3654 896"><span class="lnr lnr-phone-handset"></span> <span
+                            class="text">+953 012 3654 896</span></a>
+                    <a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span
+                            class="text"> criminology@du.ac.bd</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container main-menu">
+        <div class="row align-items-center justify-content-between d-flex">
+            <div id="logo">
+                <a href="{% url 'Criminology_App:index' %}"><img src="{% static 'img/du_logo.png' %}" alt="" title=""/></a>
+            </div>
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li><a href="{% url 'Criminology_App:index' %}">Home</a></li>
+                    <li><a href="{% url 'Criminology_App:about' %}">About</a></li>
+                    <li><a href="{% url 'Criminology_App:event' %}">Event</a></li>
+                    <li class="menu-has-children"><a href="">Faculty Members</a>
+                        <ul>
+                            <li><a href="{% url  'Criminology_App:teacher_list' %}">Faculty</a></li>
+
+
+                        </ul>
+                    </li>
+
+                    <li class="menu-has-children"><a href="#">syllabus & Curriculum</a>
+                        <ul>
+                            <li><a href="{% url 'Criminology_App:bss' %}">B.S.S</a></li>
+                            <li><a href="{% url 'Criminology_App:mss_syllabus' %}">M.S.S</a></li>
+                            <li><a href="{% url 'Criminology_App:mss_syllabus' %}">M.Phil & PhD</a></li>
+
+
+
+
+                        </ul>
+                    </li>
+
+
+                    <li class="menu-has-children"><a href="">Facilities</a>
+                        <ul>
+                            <li><a href="{% url 'Criminology_App:seminar_lab' %}">Seminar lab</a></li>
+                            <li><a href="{% url 'Criminology_App:computer_lab' %}">Computer Lab</a></li>
+                            <li><a href="{% url 'Criminology_App:crime_lab' %}">Crime Lab</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li><a href="{% url 'Criminology_App:research_publication' %}">Research & Publication</a></li>
+                    <li><a href="{% url 'Criminology_App:contact' %}">Contact</a></li>
+                    <li><a href="{% url 'Criminology_App:gallery' %}">Gallery</a></li>
+
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+{% block body_block %}
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+{% endblock %}
+
+<!-- start footer Area -->
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark bg-dark">
+
+  <div style="background-color:#0F351C;">
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0">Get connected with us on social networks!</h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f white-text mr-4"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter white-text mr-4"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram white-text"> </i>
+          </a>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="container  text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">Important Links</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p><a href="http://admission.eis.du.ac.bd/">Admission</a></p>
+        <p><a href="https://dufss.ac.bd/facilities-for-students/">Facilites of the student</a></p>
+        <p><a href="https://cu.ac.bd/">Chittagang univerity</a></p>
+        <p><a href="http://www.ru.ac.bd/">rajhshai university</a></p>
+        <p><a href="https://www.qut.edu.au/">queens lands university</a></p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Get in Touch</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="http://www.library.du.ac.bd/">Jobs</a>
+        </p>
+        <p>
+          <a href="http://journal.library.du.ac.bd/">Journal</a>
+        </p>
+        <p>
+          <a href="https://duaa-bd.org/">Almuni</a>
+        </p>
+        <p>
+          <a href="https://www.du.ac.bd/employee_directory">Telephone and Email index</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Features</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="#!">Computer Lab</a>
+        </p>
+        <p>
+          <a href="#!">Seminar Lab</a>
+        </p>
+        <p>
+          <a href="#!">Crime lab</a>
+        </p>
+        <p>
+          <a href="#!">Mphil & Phd</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fas fa-home mr-3"></i> University of Dhaka,Bangladesh</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> criminology@du.ac.bd</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+        <p>
+          <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© Design and Developed by:
+    <a href="https://www.linkedin.com/in/zahedhasan/"> Zahed Hasan Rabbi</a><br>
+      <p>an Iniative by <a href="https://www.linkedin.com/in/subrata-mandal-apu/">Subrata Mandal Apu</a> </p>
+  </div>
+
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+<!-- End footer Area -->
+
+
+<script src="{% static 'js/vendor/jquery-2.2.4.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+<script src="{% static 'js/easing.min.js' %}"></script>
+<script src="{% static 'js/hoverIntent.js' %}"></script>
+<script src="{% static 'js/superfish.min.js' %}"></script>
+<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/jquery.tabs.min.js' %}"></script>
+<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/mail-script.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/all.min.js' %}"></script>
+</body>
+
+</html>

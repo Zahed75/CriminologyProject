@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title_block %}{{ Home }}{% endblock %}
+
+{% block body_block %}
+
+
+    <!-- start banner Area -->
+    <section class="banner-area relative blog-home-banner" id="home">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content blog-header-content col-lg-12">
+                    <h1 class="text-white">
+                        Profile
+                    </h1>
+                    <h3 class="tch">Section</h3>
+                    <a href="blog-single.html" class="primary-btn">View More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End banner Area -->
+
+
+    <!--========================Teacher section start==============-->
+
+    <section id="teacher">
+        <div class="container">
+            <div class="row">
+                {% for x in teacher_list %}
+                    <div class="col-md-4">
+
+                        <div class="team-body shadow mx-5 my-5 text-center">
+
+                            <div class="team-avatar"><a href="{% url 'Criminology_App:teacher_list' %}"><img
+                                    src="/media/{{ x.teacher_img  }}" class="img-thumbnail" alt=""></a></div>
+                            <div class="team-name mt-4"><a href="{% url 'Criminology_App:teacher_details' pk=x.id %}"><h4>{{ x.teacher_name|safe }}</h4></a></div>
+                            <div class="team-designation"><p>{{ x.teacher_designation|safe }}</p></div>
+                            <div class="team-social-links d-flex flex-row justify-content-center">
+                                <a href="#" id="fb"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" id="twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" id="linkedin"><i class="fab fa-linkedin"></i></a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--=====================Teacher's Section End================-->
+
+
+{% endblock %}

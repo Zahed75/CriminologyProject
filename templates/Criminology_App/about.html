@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title_block %}{{ Home }}{% endblock %}
+
+{% block body_block %}
+
+
+    <!-- start banner Area -->
+    <section class="banner-area relative about-banner" id="home">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content col-lg-12">
+                    <h1 class="text-white">
+                        About Us
+                    </h1>
+                    <p class="text-white link-nav"><a href="index.html">Home </a> <span
+                            class="lnr lnr-arrow-right"></span> <a href="about.html"> About Us</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End banner Area -->
+
+
+    <!-- Start info Area -->
+    <section class="info-area pb-120">
+        {% for x in about %}
+            <div class="container-fluid">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 no-padding info-area-right">
+                    <h1>Our History</h1>
+                    <p>
+                        {{ x.about_details|safe }}
+                    </p>
+                </div>
+                <div class="col-lg-6 info-area-right">
+
+                    <img class="img-fluid" src="/media/{{ x.about_image }}" alt="">
+
+
+                </div>
+
+            <div class="col-md-12">
+              <div class="mission_info">
+                      <h3>{{ x.mission_title|safe }}</h3>
+                <p>{{ x.mission_details|safe }}</p>
+              </div>
+            </div>
+
+
+
+
+            </div>
+        {% endfor %}
+        </div>
+
+
+
+    </section>
+    <!-- End info Area -->
+
+    <!-- Start course-mission Area -->
+
+
+
+
+
+{% endblock %}

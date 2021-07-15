@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title_block %}{{ feature_details }}{% endblock %}
+
+{% block body_block %}
+    <!-- start banner Area -->
+    <section class="banner-area relative about-banner" id="home">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content col-lg-12">
+                    <h1 class="text-white">
+                        Facilites Details
+                    </h1>
+                    <p class="text-white link-nav"><a href="#">Home </a> <span class="lnr lnr-arrow-right"></span> <a
+                            href="event-details.html"></a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End banner Area -->
+
+    <!-- Start event-details Area -->
+      <section class="facilites_info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr>
+                        <a href="{% url 'Criminology_App:index' %}"><h4>{{ expp.facilites_title|safe }}</h4></a>
+                        <div class="fcm">
+                            <img style="width: 400px; height: 350px;" src="{{ expp.facilites_img.url }}" alt="">
+                            <p>{{ exp.details|safe }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+      </section>
+    <!-- End event-details Area -->
+
+
+{% endblock %}
