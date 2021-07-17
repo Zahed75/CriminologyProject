@@ -82,11 +82,14 @@ WSGI_APPLICATION = 'CriminologyProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Criminology_db',
+        'USER': 'postgres',
+        'PASSWORD': '4455',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
