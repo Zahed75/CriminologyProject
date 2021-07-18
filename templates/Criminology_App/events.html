@@ -5,67 +5,101 @@
 {% block body_block %}
 
 
-    <!-- start banner Area -->
-    <section class="banner-area relative about-banner" id="home">
-        <div class="overlay overlay-bg"></div>
-        <div class="container">
-            <div class="row d-flex align-items-center justify-content-center">
-                <div class="about-content col-lg-12">
-                    <h1 class="text-white">
-                        Events
-                    </h1>
-                    <p class="text-white link-nav"><a href="index.html">Home </a> <span
-                            class="lnr lnr-arrow-right"></span>
-                        <a href="events.html"> Events</a></p>
-                </div>
+<!-- start banner Area -->
+<section class="banner-area relative about-banner" id="home">
+    <div class="overlay overlay-bg"></div>
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="about-content col-lg-12">
+                <h1 class="text-white">
+                    Events
+                </h1>
+                <p class="text-white link-nav"><a href="index.html">Home </a> <span
+                        class="lnr lnr-arrow-right"></span>
+                    <a href="events.html"> Events</a></p>
             </div>
         </div>
-    </section>
-    <!-- End banner Area -->
+    </div>
+</section>
+<!-- End banner Area -->
 
-    <!-- Start events-list Area -->
-    <section class="events-list-area section-gap event-page-lists">
-        <div class="container">
-            <div class="row align-items-center">
-                {% for x in events_list %}
-                    <div class="col-lg-6 pb-30">
 
-                        <div class="single-carusel row align-items-center">
-                            <div class="col-12 col-md-6 thumb">
-                                <img class="img-fluid" src="/media/{{ x.events_img }}" alt="">
-                            </div>
-                            <div class="detials col-12 col-md-6">
-                                <p>{{ x.events_date|safe }}</p>
-                                <a href="{% url 'Criminology_App:event_details' pk=x.id %}"><h4>{{ x.events_title|safe }}</h4></a>
-                                <p>
-                                    {{ x.events_details|safe }}
-                                </p>
-                            </div>
-                        </div>
+<!-- Start past events-->
+<section class="events-list-area section-gap event-page-lists">
+    <h3 class="text-center">past Events</h3>
+    <div class="container">
+        <div class="row align-items-center">
+
+            {% for x in pt_event %}
+            <div class="col-lg-6 pb-30">
+
+                <div class="single-carusel row align-items-center">
+                    <div class="col-12 col-md-6 thumb">
+                        <img class="img-fluid" src="{{ x.events_img.url }}" alt="">
+                    </div>
+                    <div class="detials col-12 col-md-6">
+                        <p>{{ x.events_date|safe }}</p>
+                        <a href="#"><h4>{{ x.events_title|safe }}</h4></a>
 
                     </div>
-                {% endfor %}
+                </div>
 
-                <a href="#" class="text-uppercase primary-btn mx-auto mt-40">Load more courses</a>
+            </div>
+            {% endfor %}
+
+            <a href="#" class="text-uppercase primary-btn mx-auto mt-40">Load more courses</a>
+        </div>
+    </div>
+</section>
+<!-- End past events -->
+
+
+<!-- Start events-list Area -->
+<section class="events-list-area section-gap event-page-lists">
+    <h3 class="text-center">New Events</h3>
+    <div class="container">
+        <div class="row align-items-center">
+
+            {% for x in events_list %}
+                <div class="col-lg-6 pb-30">
+
+                    <div class="single-carusel row align-items-center">
+                        <div class="col-12 col-md-6 thumb">
+                            <img class="img-fluid" src="/media/{{ x.events_img }}" alt="">
+                        </div>
+                        <div class="detials col-12 col-md-6">
+                            <p>{{ x.events_date|safe }}</p>
+                            <a href="{% url 'Criminology_App:event_details' pk=x.id %}">
+                                <h4>{{ x.events_title|safe }}</h4></a>
+                            <p>
+                                {{ x.events_details|safe }}
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            {% endfor %}
+
+            <a href="#" class="text-uppercase primary-btn mx-auto mt-40">Load more courses</a>
+        </div>
+    </div>
+</section>
+<!-- End events-list Area -->
+
+
+<!-- Start cta-two Area -->
+<section class="cta-two-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 cta-left">
+                <h1>Not Yet Satisfied with our Trend?</h1>
+            </div>
+            <div class="col-lg-4 cta-right">
+                <a class="primary-btn wh" href="#">view our blog</a>
             </div>
         </div>
-    </section>
-    <!-- End events-list Area -->
-
-
-    <!-- Start cta-two Area -->
-    <section class="cta-two-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 cta-left">
-                    <h1>Not Yet Satisfied with our Trend?</h1>
-                </div>
-                <div class="col-lg-4 cta-right">
-                    <a class="primary-btn wh" href="#">view our blog</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End cta-two Area -->
+    </div>
+</section>
+<!-- End cta-two Area -->
 
 {% endblock %}

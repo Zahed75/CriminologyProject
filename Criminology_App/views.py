@@ -16,7 +16,8 @@ from Criminology_App.models import (Home, About, Eventlist, Teacher_Detail,
                                     TeacherList,
                                     Gallery, Event_Detail, UpcomingEvents, Program,
                                     ChairmanMessage, Facilite, Facilites_details,
-                                    Research_Publication,Seminar_Lab,Computer_Lab,Crime_Lab,Bss_syllabus,Mss_syllabus,Mphil_phd)
+                                    Research_Publication, Seminar_Lab, Computer_Lab, Crime_Lab, Bss_syllabus,
+                                    Mss_syllabus, Mphil_phd, Event_Detail, Past_Eventlist)
 
 
 # Create your views here.
@@ -92,8 +93,9 @@ def course_details(request):
 
 
 def events(request):
+    pt_event = Past_Eventlist.objects.all()
     events_list = Eventlist.objects.all()
-    dict = {'events_list': events_list}
+    dict = {'events_list': events_list, 'pt_event': pt_event}
     return render(request, 'Criminology_App/events.html', context=dict)
 
 
@@ -103,13 +105,22 @@ def event_details(request, pk):
     dict = {'event_info': event_info, 'single_event': single_event}
     return render(request, 'Criminology_App/event-details.html', context=dict)
 
+#
+# def pastevent_details(request,pk):
+#     pt_details=PastEvent_Detail.objects.get(event_title_id=pk)
+#     pt_list=Past_Eventlist.objects.get(id=pk)
+#     dict={'pt_details':pt_details,'  pt_list':  pt_list}
+#     return render(request,'Criminology_App/past_event_details.html',context=dict)
+
+
 
 def teacher_list(request):
     teacher_list = TeacherList.objects.all()
-
     dict = {'teacher_list': teacher_list}
     print('test', dict)
     return render(request, 'Criminology_App/faculty.html', context=dict)
+
+
 
 
 def teacher_details(requests, pk):
@@ -122,42 +133,48 @@ def teacher_details(requests, pk):
 
 
 def seminar_lab(request):
-    smlab=Seminar_Lab.objects.all()
-    dict={'smlab':smlab}
+    smlab = Seminar_Lab.objects.all()
+    dict = {'smlab': smlab}
 
-    return render(request,'Criminology_App/SeminarLab.html',context=dict)
-
+    return render(request, 'Criminology_App/SeminarLab.html', context=dict)
 
 
 def computer_lab(request):
-    comp=Computer_Lab.objects.all()
-    dict={'comp':comp}
+    comp = Computer_Lab.objects.all()
+    dict = {'comp': comp}
 
-    return render(request,'Criminology_App/Computer_Lab.html',context=dict)
+    return render(request, 'Criminology_App/Computer_Lab.html', context=dict)
+
 
 def crime_lab(request):
-    crm_lab=Crime_Lab.objects.all()
-    dict={'crm_lab':crm_lab}
+    crm_lab = Crime_Lab.objects.all()
+    dict = {'crm_lab': crm_lab}
 
-    return render(request,'Criminology_App/Crime_Lab.html',context=dict)
-
+    return render(request, 'Criminology_App/Crime_Lab.html', context=dict)
 
 
 def bss(request):
-    bs_syllabus=Bss_syllabus.objects.all()
-    dict={'bs_syllabus':bs_syllabus}
+    bs_syllabus = Bss_syllabus.objects.all()
+    dict = {'bs_syllabus': bs_syllabus}
 
-    return render(request,'Criminology_App/B.S.S.html',context=dict)
+    return render(request, 'Criminology_App/B.S.S.html', context=dict)
 
 
 def mss(request):
-    mss_syllabus=Bss_syllabus.objects.all()
-    dict={'mss_syllabus':mss_syllabus}
+    mss_syllabus = Mss_syllabus.objects.all()
+    dict = {'mss_syllabus': mss_syllabus}
 
-    return render(request,'Criminology_App/M.S.S.html',context=dict)
+    return render(request, 'Criminology_App/M.S.S.html', context=dict)
 
 
+def mphil_phd(request):
+    m_phd = Mphil_phd.objects.all()
+    dict = {'m_phd': m_phd}
 
+    return render(request, 'Criminology_App/Mphil_phd.html', context=dict)
+
+# class past_event(TemplateView):
+#     template_name = 'Criminology_App/events.html'
 
 
 # def upload_cv(request):

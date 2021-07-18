@@ -5263,3 +5263,14 @@ a, a:focus, a:hover {
 }
 /*footer end*/
 
+/*event details start*/
+.event_details,p{
+    text-align:center!important;
+    text-transform: capitalize;
+    text-align: justify;
+}
+
+.event_details,h4{
+    color: #0f9d58;
+}
+/*event details end*/
