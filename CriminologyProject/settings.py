@@ -90,6 +90,16 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'criminol_database',
+#         'USER': 'criminol_criminology',
+#         'PASSWORD': 'zxddutcriaa5',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -126,9 +136,9 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
-STATICFILES_DIRS = [STATIC_DIR, ]
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATICFILES_DIRS = [STATIC_DIR, ]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 # MEDIA_DIR
 
 MEDIA_ROOT = MEDIA_DIR
