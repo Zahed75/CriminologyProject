@@ -17,7 +17,7 @@ from Criminology_App.models import (Home, About, Eventlist, Teacher_Detail,
                                     Gallery, Event_Detail, UpcomingEvents, Program,
                                     ChairmanMessage, Facilite, Facilites_details,
                                     Research_Publication, Seminar_Lab, Computer_Lab, Crime_Lab, Bss_syllabus,
-                                    Mss_syllabus, Mphil_phd, Event_Detail, Past_Eventlist)
+                                    Mss_syllabus,Mphil_phd, Event_Detail, Past_Eventlist)
 
 
 # Create your views here.

@@ -33,7 +33,7 @@ class Facilite(models.Model):
 
 class Facilites_details(models.Model):
     title = models.ForeignKey(Facilite, on_delete=models.CASCADE)
-    details = models.TextField(max_length=3000, verbose_name='Put here facilites details')
+    details = models.TextField(max_length=30000, verbose_name='Put here facilites details')
 
     def __str__(self):
         return str(self.title)

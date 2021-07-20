@@ -39,6 +39,94 @@
     <!-- <link rel="stylesheet" href="css/main.css"> -->
     <link rel="stylesheet" href="{% static 'css/all.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+
+        .new_nav_logo img {
+            height: 60px;
+            width: auto;
+        }
+        .navbar_links a {
+            margin: 5px;
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .phone-navbar-main {
+            {#display: none;#}
+            padding: 10px;
+            padding-top: 40px;
+            position: fixed;
+            height: 100%;
+            width: 250px;
+            z-index: 1000;
+            top: 0;
+            background: #171716;
+            color: #fff;
+        }
+
+        .phone-navbar-main a, .phone-navbar-main li {
+            margin: 10px;
+            text-decoration: none;
+        }
+        .phone-navbar-main .dropdown-toggle {
+            padding: 0 !important;
+        }
+
+        .back-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        .toggler-btn {
+            font-size: 20px;
+            display: none;
+        }
+
+        @media (max-width: 1200px) {
+            .navbar_links {
+                display: none !important;
+            }
+
+            .toggler-btn {
+                display: block;
+            }
+            .menu-has-children:hover > .submenu {
+            display: block;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .phone-navbar-main {
+                display: none !important;
+            }
+        }
+
+        .menu-has-children {
+            list-style: none;
+        }
+
+        .submenu {
+            padding: 20px;
+            position: absolute;
+            display: none;
+            background: grey;
+            z-index: 5000;
+        }
+
+        .menu-has-children:hover > .submenu {
+            display: block;
+        }
+
+
+
+
+    </style>
 </head>
 
 <body>
@@ -64,56 +152,93 @@
             </div>
         </div>
     </div>
-    <div class="container main-menu">
-        <div class="row align-items-center justify-content-between d-flex">
-            <div id="logo">
-                <a href="{% url 'Criminology_App:index' %}"><img src="{% static 'img/du_logo.png' %}" alt="" title=""/></a>
-            </div>
-            <nav id="nav-menu-container">
-                <ul class="nav-menu">
-                    <li><a href="{% url 'Criminology_App:index' %}">Home</a></li>
-                    <li><a href="{% url 'Criminology_App:about' %}">About</a></li>
-                    <li><a href="{% url 'Criminology_App:event' %}">Event</a></li>
-                    <li class="menu-has-children"><a href="">Faculty Members</a>
-                        <ul>
-                            <li><a href="{% url  'Criminology_App:teacher_list' %}">Faculty</a></li>
+{# New Navbar #}
+        <div class="container mt-3">
+            <nav class="d-flex flex-row justify-content-between align-items-center">
+                <div class="new_nav_logo"><img src="{% static 'img/du_logo.png' %}"></div>
+                <div class="navbar_links d-flex flex-row align-items-center" id="navbar_links_id">
+                    <a href="{% url 'Criminology_App:index' %}">HOME</a>
+                    <a href="{% url 'Criminology_App:about' %}">ABOUT</a>
+                    <a href="{% url 'Criminology_App:event' %}">EVENT</a>
 
-
+                    <li class="menu-has-children"><a href="#">FACULTY MEMBER &nbsp;<i class="fas fa-sort-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="{% url 'Criminology_App:teacher_list' %}">Faculty</a></li>
                         </ul>
                     </li>
-
-                    <li class="menu-has-children"><a href="#">syllabus & Curriculum</a>
-                        <ul>
-                            <li><a href="{% url 'Criminology_App:bss' %}">B.S.S</a></li>
-                            <li><a href="{% url 'Criminology_App:mss_syllabus' %}">M.S.S</a></li>
-                            <li><a href="{% url 'Criminology_App:mss_syllabus' %}">M.Phil & PhD</a></li>
-
-
-
-
+                    <li class="menu-has-children"><a href="#">SYLLABUS & CURRICULUM &nbsp;<i class="fas fa-sort-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="{% url 'Criminology_App:bss' %}">B.S.S.</a></li>
+                            <li><a href="{% url 'Criminology_App:mss_syllabus' %}">M.S.S.</a></li>
+                            <li><a href="{% url 'Criminology_App:mphil' %}">M.Phil & PhD</a></li>
                         </ul>
                     </li>
-
-
-                    <li class="menu-has-children"><a href="">Facilities</a>
-                        <ul>
-                            <li><a href="{% url 'Criminology_App:seminar_lab' %}">Seminar lab</a></li>
+                    <li class="menu-has-children"><a href="#">FACILITIES &nbsp;<i class="fas fa-sort-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="{% url 'Criminology_App:seminar_lab' %}">Seminar Lab</a></li>
                             <li><a href="{% url 'Criminology_App:computer_lab' %}">Computer Lab</a></li>
                             <li><a href="{% url 'Criminology_App:crime_lab' %}">Crime Lab</a></li>
                         </ul>
                     </li>
-
-
-                    <li><a href="{% url 'Criminology_App:research_publication' %}">Research & Publication</a></li>
-                    <li><a href="{% url 'Criminology_App:contact' %}">Contact</a></li>
-                    <li><a href="{% url 'Criminology_App:gallery' %}">Gallery</a></li>
-
-
-                </ul>
+                    <a href="{% url 'Criminology_App:research_publication' %}">RESEARCH & PUBLICATIONS</a>
+                    <a href="{% url 'Criminology_App:contact' %}">CONTACT</a>
+                    <a href="{% url 'Criminology_App:gallery' %}">GALLERY</a>
+                </div>
+                <div class="toggler-btn" id="toggler_btn_id">
+                    <a href="#"><i class="fas fa-bars"></i></a>
+                </div>
             </nav>
         </div>
-    </div>
 </header>
+{# New Navbar #}
+
+{#    Phone navbar starts#}
+    <div class="phone-navbar-main hide" id="phone_nabvar">
+        <div class="inner-main d-flex flex-column align-items-start">
+            <button class="back-btn" id="back_button_id"><i class="fas fa-arrow-circle-left"></i></button>
+            <a href="{% url 'Criminology_App:index' %}">HOME</a>
+            <a href="{% url 'Criminology_App:about' %}">ABOUT</a>
+            <a href="{% url 'Criminology_App:event' %}">EVENT</a>
+            <li class="menu-has-children">FACULTY MEMBER &nbsp;<i class="fas fa-sort-down"></i>
+                        <ul class="submenu">
+                            <li><a href="{% url 'Criminology_App:teacher_list' %}">Faculty</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-has-children">SYLLABUS & CURRICULUM &nbsp;<i class="fas fa-sort-down"></i>
+                        <ul class="submenu">
+                            <li><a href="{% url 'Criminology_App:bss' %}">B.S.S.</a></li>
+                            <li><a href="{% url 'Criminology_App:mss_syllabus' %}">M.S.S.</a></li>
+                            <li><a href="{% url 'Criminology_App:mphil' %}">M.Phil & Ph.D</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-has-children">FACILITIES &nbsp;<i class="fas fa-sort-down"></i>
+                        <ul class="submenu">
+                            <li><a href="{% url 'Criminology_App:seminar_lab' %}">Seminar Library</a></li>
+                            <li><a href="{% url 'Criminology_App:computer_lab' %}">Computer Lab</a></li>
+                            <li><a href="{% url 'Criminology_App:crime_lab' %}">Crime Lab</a></li>
+                        </ul>
+                    </li>
+            <a href="{% url 'Criminology_App:research_publication' %}">RESEARCH & PUBLICATIONS</a>
+            <a href="{% url 'Criminology_App:contact' %}">CONTACT</a>
+            <a href="{% url 'Criminology_App:gallery' %}">GALLERY</a>
+        </div>
+    </div>
+
+{#    Phone navbar ends#}
+
+<script>
+    document.getElementById("toggler_btn_id").addEventListener('click', () => {
+        document.getElementById("phone_nabvar").classList.toggle("hide");
+    });
+
+    document.getElementById("back_button_id").addEventListener('click', () => {
+        document.getElementById("phone_nabvar").classList.toggle("hide");
+    })
+</script>
+
+
+</body>
+</html>
 
 
 {% block body_block %}
@@ -123,6 +248,12 @@
         </div>
     </div>
 {% endblock %}
+
+
+
+
+
+
 
 <!-- start footer Area -->
 <!-- Footer -->
@@ -185,9 +316,8 @@
         <!-- Content -->
         <h6 class="text-uppercase font-weight-bold">Important Links</h6>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p><a href="http://admission.eis.du.ac.bd/">Admission</a></p>
-
-        <p><a href="https://cu.ac.bd/">Chittagang univerity</a></p>
+          <p><a href="https://www.uq.edu.au/">QueensLand University</a></p>
+          <p><a href="https://cu.ac.bd/">Chittagang univerity</a></p>
         <p><a href="http://www.ru.ac.bd/">rajhshai university</a></p>
         <p><a href="https://www.qut.edu.au/">queens lands university</a></p>
 
@@ -201,18 +331,19 @@
         <h6 class="text-uppercase font-weight-bold">Get in Touch</h6>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <p>
-          <a href="http://www.library.du.ac.bd/">Jobs</a>
+          <a href="https://www.du.ac.bd/footer_widget/footer_widget_item/undergraduate_students">Undergraduate Students</a>
         </p>
         <p>
-          <a href="http://journal.library.du.ac.bd/">Journal</a>
+          <a href="https://www.du.ac.bd/footer_widget/footer_widget_item/graduate_students">Graduate Students</a>
         </p>
         <p>
-          <a href="https://duaa-bd.org/">Almuni</a>
+          <a href="https://www.du.ac.bd/footer_widget/footer_widget_item/mphil_students">Mphil</a>
         </p>
         <p>
-          <a href="https://www.du.ac.bd/employee_directory">Telephone and Email index</a>
+          <a href="https://www.du.ac.bd/footer_widget/footer_widget_item/phd_students">PhD</a>
         </p>
-          <p><a href="https://dufss.ac.bd/facilities-for-students/">Facilites of the student</a></p>
+          <p><a href="https://www.du.ac.bd/footer_widget/footer_widget_item/financial_aid">Scholarships and Aids</a></p>
+          <p><a href="https://www.du.ac.bd/footer_widget/footer_widget_item/freshers_guide">Student Counselling & Guidance</a></p>
 
       </div>
       <!-- Grid column -->
@@ -221,19 +352,26 @@
       <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 
         <!-- Links -->
-        <h6 class="text-uppercase font-weight-bold">Features</h6>
+        <h6 class="text-uppercase font-weight-bold">Student Corner</h6>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <p>
-          <a href="#!">Computer Lab</a>
+          <a href="https://ssl.du.ac.bd/studentlogin">Student Login</a>
         </p>
         <p>
-          <a href="#!">Seminar Lab</a>
+          <a href="https://service.du.ac.bd/home">Student Online Servicer</a>
         </p>
         <p>
-          <a href="#!">Crime lab</a>
+          <a href="https://studentscholarship.du.ac.bd/">Student Scholarships</a>
         </p>
         <p>
-          <a href="#!">Mphil & Phd</a>
+          <a href="https://www.du.ac.bd/home/hall_admin/hall">Hall Residence</a>
+        </p>
+           <p>
+          <a href="https://result.du.ac.bd/?fbclid=IwAR1E9068r1kL_184YTVjqa7-2bcUcJB1CNgYINhfHRM0jv2L05vzF1KBDK4">DU Result</a>
+        </p>
+
+             <p>
+          <a href="http://www.library.du.ac.bd/?fbclid=IwAR1PjWaBvMgnHwX3iPk06IUaRE-mEkqsiN_geXnT5ev9t4wb9X0BO02O7IU">DU Library</a>
         </p>
 
       </div>

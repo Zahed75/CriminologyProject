@@ -11,7 +11,7 @@
             <div class="col-sm-12 avatar">
 
                 <img src="{{ teacher_data.teacher_img.url }}" alt="" width="200">
-                <h1 class="mt-3">{{ teacher_data.teacher_name|safe }}</h1>
+                <h1 class="mt-3 text-white">{{ teacher_data.teacher_name|safe }}</h1>
                 <p class="designation">{{ teacher_data.teacher_designation|safe }}
                 </p>
                 <span class="education"> {{ teacher_details.teacher_subjetct|safe }}
@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 social mt-3 d-flex flex-row flex-wrap justify-content-between">
+            <div class="col-sm-12 social  team-social-links  mt-3 d-flex flex-row flex-wrap justify-content-between">
                 <a href="{{ teacher_data.teacher_fb }}" id="fb"><i class="fab fa-facebook-f"></i></a>
                 <a href="{{ teacher_data.teacher_twitter }}" id="twitter"><i class="fab fa-twitter"></i></a>
                 <a href="{{ teacher_data.teacher_linkldn }}" id="linkedin"><i class="fab fa-linkedin"></i></a>
