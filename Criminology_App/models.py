@@ -87,13 +87,7 @@ class Event_Detail(models.Model):
 
 # ==================================================
 
-class Past_Eventlist(models.Model):
-    events_title = models.CharField(max_length=333, verbose_name='Put a Event title here')
-    events_img = models.ImageField(upload_to='profile_pics')
-    events_date = models.CharField(max_length=120, verbose_name='Put here static date')
 
-    def __str__(self):
-        return self.events_title
 
 
 # class PastEvent_Detail(models.Model):
