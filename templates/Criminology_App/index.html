@@ -176,7 +176,7 @@
                         </div>
                         <div class="detials col-12 col-md-6">
                             <p>{{ x.event_date|safe }}</p>
-                            <a href="event-details.html"><h4>{{ x.event_title|safe }}</h4></a>
+                            <a href="event-details.html">{{ x.event_file.url }}<h4>{{ x.event_title|safe }}</h4></a>
                             <p>
                               {{ x.event_details|safe }}
                             </p>
