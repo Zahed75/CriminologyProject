@@ -119,8 +119,11 @@ class Teacher_Detail(models.Model):
     research_interest = models.TextField(max_length=700, verbose_name='put here your reaserach and interest')
     teacher_cv = models.FileField(upload_to='Cv', blank=False)
 
-    def __str__(self):
-        return str(self.teacher_name_id)
+    # def __str__(self):
+    #     return str(self.teacher_name_id)
+
+    class Meta:
+        ordering = ['teacher_name', ]
 
 
 class Research_Publication(models.Model):
