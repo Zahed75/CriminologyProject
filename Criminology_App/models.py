@@ -85,20 +85,6 @@ class Event_Detail(models.Model):
         return str(self.event_title)
 
 
-# ==================================================
-
-
-
-
-# class PastEvent_Detail(models.Model):
-#     event_title = models.ForeignKey(Eventlist, on_delete=models.CASCADE)
-#     events_details = models.TextField(max_length=3000, verbose_name='Put a event details here')
-#
-#     def __str__(self):
-#         return str(self.event_title)
-
-
-# ==================================================
 
 
 class TeacherList(models.Model):
@@ -119,8 +105,6 @@ class Teacher_Detail(models.Model):
     research_interest = models.TextField(max_length=700, verbose_name='put here your reaserach and interest')
     teacher_cv = models.FileField(upload_to='Cv', blank=False)
 
-    # def __str__(self):
-    #     return str(self.teacher_name_id)
 
     class Meta:
         ordering = ['teacher_name', ]
