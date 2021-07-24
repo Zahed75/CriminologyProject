@@ -110,7 +110,7 @@ def event_details(request, pk):
 
 
 def teacher_list(request):
-    teacher_list = TeacherList.objects.all()
+    teacher_list = TeacherList.objects.all().order_by('id')
     dict = {'teacher_list': teacher_list}
     print('test', dict)
     return render(request, 'Criminology_App/faculty.html', context=dict)

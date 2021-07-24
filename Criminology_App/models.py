@@ -106,8 +106,8 @@ class Teacher_Detail(models.Model):
     teacher_cv = models.FileField(upload_to='Cv', blank=False)
 
 
-    class Meta:
-        ordering = ['teacher_name', ]
+    def __str__(self):
+        return str(self.teacher_name)
 
 
 class Research_Publication(models.Model):
@@ -137,7 +137,7 @@ class Seminar_Lab(models.Model):
     seminar_details = models.TextField(max_length=10000, verbose_name='write here seminar details')
 
     def __str__(self):
-        return str(self.seminar_image)
+        return self.seminar_details
 
 
 class Computer_Lab(models.Model):
@@ -145,7 +145,7 @@ class Computer_Lab(models.Model):
     lab_details = models.TextField(max_length=10000, verbose_name='write here seminar details')
 
     def __str__(self):
-        return str(self.seminar_image)
+        return self.lab_details
 
 
 class Crime_Lab(models.Model):
@@ -153,7 +153,7 @@ class Crime_Lab(models.Model):
     lab_details = models.TextField(max_length=10000, verbose_name='write here seminar details')
 
     def __str__(self):
-        return str(self.lab_image)
+        return self.lab_details
 
 
 class Bss_syllabus(models.Model):
