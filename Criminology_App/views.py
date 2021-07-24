@@ -105,12 +105,7 @@ def event_details(request, pk):
     dict = {'event_info': event_info, 'single_event': single_event}
     return render(request, 'Criminology_App/event-details.html', context=dict)
 
-#
-# def pastevent_details(request,pk):
-#     pt_details=PastEvent_Detail.objects.get(event_title_id=pk)
-#     pt_list=Past_Eventlist.objects.get(id=pk)
-#     dict={'pt_details':pt_details,'  pt_list':  pt_list}
-#     return render(request,'Criminology_App/past_event_details.html',context=dict)
+
 
 
 
@@ -173,40 +168,4 @@ def mphil_phd(request):
 
     return render(request, 'Criminology_App/Mphil_phd.html', context=dict)
 
-# class past_event(TemplateView):
-#     template_name = 'Criminology_App/events.html'
 
-
-# def upload_cv(request):
-#     if request.user.is_authenticated:
-#         if request.method == 'POST':
-#             form = Upload_cv(request.POST)
-#             cv_file = request.POST.get('cv_file')
-#             cv_ins = Cv(name=request.user, cv_file=cv_file)
-#             cv_ins.save()
-#
-#             return HttpResponse("<h1>Cv uploaded successfully</h1>")
-#         else:
-#             form = Upload_cv(initial={'name': request.user})
-#
-#         data = Cv.objects.all()
-#         logged_in_user = request.user
-#
-#         dict = {'data': data, 'form': form, 'logged_in_user': logged_in_user}
-#         return render(request, 'Criminology_App/resume.html', context=dict)
-#     else:
-#         return render(request, 'App_Login/login.html')
-
-# class CvUpdate(View):
-#     def get(self, request, id):
-#         cv_ins = Cv.objects.get(pk=id)
-#         form = Upload_cv(instance=cv_ins)
-#         return render(request, 'Criminology_App/updatecv.html', {'form' : form})
-#
-#     def post(self, request, id):
-#         cv_ins = Cv.objects.get(pk=id)
-#         form = Upload_cv(request.POST, instance=cv_ins)
-#         # if form.is_valid():
-#         form.save()
-
-# return render(request, 'Criminology_App/updatecv.html', {'form': form})

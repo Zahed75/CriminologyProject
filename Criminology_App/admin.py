@@ -131,10 +131,3 @@ admin.site.register(Mphil_phd, Mphil_phdModelAdmin)
 
 
 
-
-
-# class PastEvent_DetailModelAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
-#     summernote_fields = '__all__'
-#
-#
-# admin.site.register(PastEvent_Detail, PastEvent_DetailModelAdmin)
