@@ -928,13 +928,13 @@ th {
     }
 }
 
-b,
-sup,
-sub,
-u,
-del {
-    color: #f7631b;
-}
+/*b,*/
+/*sup,*/
+/*sub,*/
+/*u,*/
+/*del {*/
+/*    color: #f7631b;*/
+/*}*/
 
 h1 {
     font-size: 36px;
