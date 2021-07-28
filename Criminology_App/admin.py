@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 from Criminology_App.models import (Home,About, Eventlist, Teacher_Detail, TeacherList,
-        Gallery,Event_Detail, UpcomingEvents, Program, ChairmanMessage,
+        Gallery,Event_Detail, UpcomingEvents, Program, ChairmanMessage, HeaderAndFooter,
         Facilite, Facilites_details,Research_Publication,Seminar_Lab,Computer_Lab,Crime_Lab,Bss_syllabus,Mss_syllabus,Mphil_phd)
 
 # Register your models here.
@@ -128,6 +128,8 @@ class Mphil_phdModelAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
 
 
 admin.site.register(Mphil_phd, Mphil_phdModelAdmin)
+
+admin.site.register(HeaderAndFooter)
 
 
 

@@ -175,3 +175,15 @@ class Mphil_phd(models.Model):
 
     def __str__(self):
         return str(self.syllabus_file)
+
+
+class HeaderAndFooter(models.Model):
+    phone_number = models.CharField(max_length=100)
+    facebook_link = models.URLField(max_length=100, verbose_name='Facebook Link')
+    twitter_link = models.URLField(max_length=100, verbose_name='Twitter Link')
+    google_link = models.URLField(max_length=100, verbose_name='Google Plus Link')
+    linkedin_link = models.URLField(max_length=100, verbose_name='LinkedIn Link')
+    instagram_link = models.URLField(max_length=100, verbose_name='Instagram Link')
+
+    def __str__(self):
+        return str(self.id)

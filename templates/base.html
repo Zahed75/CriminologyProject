@@ -135,8 +135,12 @@
             <div class="row">
                 <div class="col-lg-6 col-sm-6 col-8 header-top-left no-padding">
                     <ul>
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        {% for item in header_footer %}
+
+
+
+                        <li><a href="{{ item.facebook_link }}" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="{{ item.twitter_link }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
 
                     </ul>
 
@@ -144,7 +148,7 @@
 
                 <div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
                     <a href="tel:+953 012 3654 896"><span class="lnr lnr-phone-handset"></span> <span
-                            class="text">+880 1714-531265</span></a>
+                            class="text">{{ item.phone_number }}</span></a>
                     <a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span
                             class="text">criminology@du.ac.bd</span></a>
                 </div>
@@ -275,23 +279,23 @@
                 <div class="col-md-6 col-lg-7 text-center text-md-right">
 
                     <!-- Facebook -->
-                    <a class="fb-ic">
+                    <a href="{{ item.facebook_link }}" target="_blank" class="fb-ic">
                         <i class="fab fa-facebook-f white-text mr-4"> </i>
                     </a>
                     <!-- Twitter -->
-                    <a class="tw-ic">
+                    <a href="{{ item.twitter_link }}" target="_blank" class="tw-ic">
                         <i class="fab fa-twitter white-text mr-4"> </i>
                     </a>
                     <!-- Google +-->
-                    <a class="gplus-ic">
+                    <a href="{{ item.google_link }}" target="_blank" class="gplus-ic">
                         <i class="fab fa-google-plus-g white-text mr-4"> </i>
                     </a>
                     <!--Linkedin -->
-                    <a class="li-ic">
+                    <a href="{{ item.linkedin_link }}" target="_blank" class="li-ic">
                         <i class="fab fa-linkedin-in white-text mr-4"> </i>
                     </a>
                     <!--Instagram-->
-                    <a class="ins-ic">
+                    <a href="{{ item.instagram_link }}" target="_blank" class="ins-ic">
                         <i class="fab fa-instagram white-text"> </i>
                     </a>
 
@@ -396,7 +400,8 @@
                 <p>
                     <i class="fas fa-envelope mr-3"></i> criminology@du.ac.bd</p>
                 <p>
-                    <i class="fas fa-phone mr-3"></i> +880 1714-531265</p>
+                    <i class="fas fa-phone mr-3"></i> {{ item.phone_number }}</p>
+                {% endfor %}
 
 
             </div>
