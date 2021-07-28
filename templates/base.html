@@ -141,7 +141,7 @@
 
                         <li><a href="{{ item.facebook_link }}" target="_blank"><i class="fab fa-facebook"></i></a></li>
                         <li><a href="{{ item.twitter_link }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
-
+                        {% endfor %}
                     </ul>
 
                 </div>
@@ -277,7 +277,7 @@
 
                 <!-- Grid column -->
                 <div class="col-md-6 col-lg-7 text-center text-md-right">
-
+                        {% for item in header_footer %}
                     <!-- Facebook -->
                     <a href="{{ item.facebook_link }}" target="_blank" class="fb-ic">
                         <i class="fab fa-facebook-f white-text mr-4"> </i>
@@ -298,7 +298,7 @@
                     <a href="{{ item.instagram_link }}" target="_blank" class="ins-ic">
                         <i class="fab fa-instagram white-text"> </i>
                     </a>
-
+                        {% endfor %}
                 </div>
                 <!-- Grid column -->
 
@@ -391,7 +391,7 @@
 
             <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
+                        {% for item in header_footer %}
                 <!-- Links -->
                 <h6 class="text-uppercase font-weight-bold">Contact</h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
@@ -401,7 +401,7 @@
                     <i class="fas fa-envelope mr-3"></i> criminology@du.ac.bd</p>
                 <p>
                     <i class="fas fa-phone mr-3"></i> {{ item.phone_number }}</p>
-                {% endfor %}
+                        {% endfor %}
 
 
             </div>
