@@ -391,7 +391,7 @@
 
             <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        {% for item in header_footer %}
+
                 <!-- Links -->
                 <h6 class="text-uppercase font-weight-bold">Contact</h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
@@ -400,6 +400,7 @@
                 <p>
                     <i class="fas fa-envelope mr-3"></i> criminology@du.ac.bd</p>
                 <p>
+                    {% for item in header_footer %}
                     <i class="fas fa-phone mr-3"></i> {{ item.phone_number }}</p>
                         {% endfor %}
 
