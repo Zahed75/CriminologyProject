@@ -131,7 +131,7 @@ def seminar_lab(request):
     smlab = Seminar_Lab.objects.all()
     dict = {'smlab': smlab}
 
-    return render(request, 'Criminology_App/SeminarLab.html', context=dict)
+    return render(request, 'Criminology_App/SeminarLibrary.html', context=dict)
 
 
 def computer_lab(request):
