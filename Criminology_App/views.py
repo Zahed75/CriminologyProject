@@ -127,7 +127,7 @@ def teacher_details(requests, pk):
     return render(requests, 'Criminology_App/card_details.html', context=dict)
 
 
-def seminar_lab(request):
+def seminar_Library(request):
     smlab = Seminar_Lab.objects.all()
     dict = {'smlab': smlab}
 
