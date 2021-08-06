@@ -200,49 +200,49 @@
 
     {#================================New Event Start==============================#}
 
-{#    <div class="container">#}
-{#        <div class="row">#}
-{#            <div class="col-md-12">#}
-{#                <section class="button">#}
-{#                    <div class="container-lg py-2">#}
-{#                        <button class="btn btn-dark btn-sm text-uppercase" onclick="myFunction()" id="btnValue"#}
-{#                                type="button">Dark mode#}
-{#                        </button>#}
-{#                    </div>#}
-{#                </section>#}
-{#                <section id="topic" class="interest-section">#}
-{#                            <h2 class="text-center " style="color:gray;">New event Details</h2>#}
-{#                    <div class="container-lg py-5">#}
-{#                        <div class="container-lg px-0">#}
-{##}
-{#                            <div class="row">#}
-{#                                {% for x in New_Event %}#}
-{#                                <div class="col-md-4 my-2 mb-5">#}
-{#                                    <div class="card shadow-sm ins-1">#}
-{#                                        <div class="card-body d-flex align-items-center">#}
-{##}
-{##}
-{#                                            <div class="title-box">#}
-{#                                                <h3 class="mb-0"><a class="d-flex align-items-center" href="{{ x.event_file.url }}"><i#}
-{#                                                        class="icon-left fas fa-angle-double-right"></i>{{ x.event_title|safe }}</a>#}
-{#                                                </h3>#}
-{#                                            </div>#}
-{##}
-{##}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                </div>#}
-{#                                {% endfor %}#}
-{#                            </div>#}
-{##}
-{#                        </div>#}
-{##}
-{#                    </div>#}
-{##}
-{#                </section>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <section class="button">
+                    <div class="container-lg py-2">
+                        <button class="btn btn-dark btn-sm text-uppercase" onclick="myFunction()" id="btnValue"
+                                type="button">Dark mode
+                        </button>
+                    </div>
+                </section>
+                <section id="topic" class="interest-section">
+                            <h2 class="text-center " style="color:gray;">New event Details</h2>
+                    <div class="container-lg py-5">
+                        <div class="container-lg px-0">
+
+                            <div class="row">
+                                {% for x in New_Event %}
+                                <div class="col-md-4 my-2 mb-5">
+                                    <div class="card shadow-sm ins-1">
+                                        <div class="card-body d-flex align-items-center">
+
+
+                                            <div class="title-box">
+                                                <h3 class="mb-0"><a class="d-flex align-items-center" href="{{ x.event_file.url }}"><i
+                                                        class="icon-left fas fa-angle-double-right"></i>{{ x.event_title|safe }}</a>
+                                                </h3>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
 
     {#================================New Event end==============================#}
 

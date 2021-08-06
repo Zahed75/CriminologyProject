@@ -94,16 +94,16 @@ WSGI_APPLICATION = 'CriminologyProject.wsgi.application'
 # }
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'criminol_database',
-#         'USER': 'criminol_criminology',
-#         'PASSWORD': 'zxddutcriaa5',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'criminol_database',
+        'USER': 'criminol_criminology',
+        'PASSWORD': 'zxddutcriaa5',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
+}
 
 
 
