@@ -185,10 +185,3 @@ class HeaderAndFooter(models.Model):
     def __str__(self):
         return str(self.id)
 
-
-class NewEvent(models.Model):
-    event_title = models.TextField(max_length=400)
-    event_file = models.FileField(upload_to='Syllabus')
-
-    def __str__(self):
-        return self.event_title
