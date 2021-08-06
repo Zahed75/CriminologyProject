@@ -185,3 +185,10 @@ class HeaderAndFooter(models.Model):
     def __str__(self):
         return str(self.id)
 
+
+class NewsPublication(models.Model):
+    news_title = models.CharField(max_length=400)
+    news_file = models.FileField(upload_to='Pulication')
+
+    def __str__(self):
+        return self.news_title

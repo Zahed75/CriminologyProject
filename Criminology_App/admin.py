@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
-from Criminology_App.models import (Home,About, Eventlist, Teacher_Detail, TeacherList,
-        Gallery,Event_Detail, UpcomingEvents, Program, ChairmanMessage, HeaderAndFooter,
-        Facilite, Facilites_details,Research_Publication,Seminar_Lab,Computer_Lab,Crime_Lab,Bss_syllabus,Mss_syllabus,Mphil_phd)
+from Criminology_App.models import (Home, About, Eventlist, Teacher_Detail, TeacherList,
+                                    Gallery, Event_Detail, UpcomingEvents, Program, ChairmanMessage, HeaderAndFooter,
+                                    Facilite, Facilites_details, Research_Publication, Seminar_Lab, Computer_Lab,
+                                    Crime_Lab, Bss_syllabus, Mss_syllabus, Mphil_phd, NewsPublication)
 
 # Register your models here.
 admin.site.register(Home)
@@ -15,14 +16,11 @@ class FaciliteModelAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
 admin.site.register(Facilite, FaciliteModelAdmin)
 
 
-
 class Research_PublicationModelAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
     summernote_fields = '__all__'
 
 
 admin.site.register(Research_Publication, Research_PublicationModelAdmin)
-
-
 
 
 class Facilites_detailsModelAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
@@ -89,6 +87,7 @@ class ChairmanMessageModelAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
 
 admin.site.register(ChairmanMessage, ChairmanMessageModelAdmin)
 
+
 class Seminar_LabModelAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
     summernote_fields = '__all__'
 
@@ -116,6 +115,7 @@ class Bss_syllabusModelAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
 
 admin.site.register(Bss_syllabus, Bss_syllabusModelAdmin)
 
+
 class Mss_syllabusModelAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
     summernote_fields = '__all__'
 
@@ -132,3 +132,9 @@ admin.site.register(Mphil_phd, Mphil_phdModelAdmin)
 admin.site.register(HeaderAndFooter)
 
 
+
+class NewsPublicationModelAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
+    summernote_fields = '__all__'
+
+
+admin.site.register(NewsPublication, NewsPublicationModelAdmin)
