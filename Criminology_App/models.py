@@ -16,7 +16,7 @@ class Home(models.Model):
 class ChairmanMessage(models.Model):
     departmnent_intro = models.TextField(max_length=4000, verbose_name='Put here department introduction')
     chairman_name = models.TextField(max_length=120, verbose_name='write here chariman Name')
-    chairman_role = models.TextField(max_length=300, verbose_name='write hete chairman Role detials')
+    chairman_role = models.TextField(max_length=300, verbose_name='write hete chairman Role detials',blank=True)
     chairman_img = models.ImageField(upload_to='gallery')
 
     def __str__(self):
