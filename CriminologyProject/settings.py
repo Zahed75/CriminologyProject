@@ -82,28 +82,28 @@ WSGI_APPLICATION = 'CriminologyProject.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'Criminology_db',
-#         'USER': 'postgres',
-#         'PASSWORD': '4455',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'criminol_database',
-        'USER': 'criminol_criminology',
-        'PASSWORD': 'zxddutcriaa5',
+        'NAME': 'Criminology_db',
+        'USER': 'postgres',
+        'PASSWORD': '4455',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
 }
+
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'criminol_database',
+#         'USER': 'criminol_criminology',
+#         'PASSWORD': 'zxddutcriaa5',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
 
 
 
@@ -151,7 +151,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
-LOGIN_URL = '/account/login/'
+
 
 # SMTP System
 

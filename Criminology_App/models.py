@@ -85,8 +85,6 @@ class Event_Detail(models.Model):
         return str(self.event_title)
 
 
-
-
 class TeacherList(models.Model):
     teacher_name = models.CharField(max_length=212, verbose_name='Put a teacher name')
     teacher_img = models.ImageField(upload_to='profile_pics')
@@ -104,7 +102,6 @@ class Teacher_Detail(models.Model):
     teacher_subjetct = models.TextField(max_length=600, verbose_name='Put which subject are you taken')
     research_interest = models.TextField(max_length=700, verbose_name='put here your reaserach and interest')
     teacher_cv = models.FileField(upload_to='Cv', blank=False)
-
 
     def __str__(self):
         return str(self.teacher_name)
@@ -189,11 +186,9 @@ class HeaderAndFooter(models.Model):
         return str(self.id)
 
 
-
-
 class NewEvent(models.Model):
-    event_title=models.TextField(max_length=400)
-    event_file=models.FileField(upload_to='Syllabus')
+    event_title = models.TextField(max_length=400)
+    event_file = models.FileField(upload_to='Syllabus')
 
     def __str__(self):
         return self.event_title
