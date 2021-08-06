@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    /* GENERAL FONT */
+    --font1: "Titillium Web", sans-serif;
+    --font2: 'Roboto', sans-serif;
+    /* GENERAL COLOR */
+    --bg-col-1: #0059b3;
+    --bg-col-2: #dc3545;
+    --bg-col-3: #fff;
+    --bg-col-4: #024c96;
+    --tx-color-1: #fff;
+    --tx-color-2: #000;
+    --tx-color-3: #0059b3;
+  /* INTEREST */
+    --bg-interest-section: rgb(255, 255, 255);
+    --tx-interest-section-title: #212529;
+    /* INTEREST CARD 1*/
+    --bg-interest-card1: #dc3545;
+    --tx-interest-card1-body: #fff;
+    --tx-interest-card1-link: #fff;
+    /* INTEREST CARD 2 */
+    --bg-interest-card2: #0059b3;
+    --tx-interest-card2-body: #fff;
+    --tx-interest-card2-link: #fff;
+
+}
+.dark-mode {
+    /* GENERAL COLOR */
+    --bg-col-1: #121212;
+    --tx-color-1: #fff;
+    /* INTEREST*/
+    --bg-interest-section: #121212;
+    --tx-interest-section-title: #fff;
+    /* INTEREST CARD 1*/
+    --bg-interest-card1: #272727;
+    --tx-interest-card1-body: #fff;
+    --tx-interest-card1-link: #fff;
+    /* INTEREST CARD */
+    --bg-interest-card2: #272727;
+    --tx-interest-card2-body: #fff;
+    --tx-interest-card2-link: #fff;
+}
+
+
+.interest-section {
+  background: var(--bg-interest-section);
+  font-family: var(--font1);
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+.interest-section .title-section {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--tx-interest-section-title);
+}
+.interest-section .card.ins-1 {
+  background: var(--bg-interest-card1);
+}
+.interest-section .card.ins-1 .card-body {
+  color: var(--tx-interest-card1-body);
+  min-height: 78px;
+}
+.interest-section .card.ins-1 .card-body .title-box h3, .interest-section .card.ins-1 .card-body .title-box .h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.interest-section .card.ins-1 .card-body .title-box h3 .icon-left, .interest-section .card.ins-1 .card-body .title-box .h3 .icon-left {
+  font-size: 1.3rem;
+  transition: all 0.2s ease-in-out;
+  margin: 0 10px 0 0;
+}
+@media (min-width: 768px) {
+  .interest-section .card.ins-1 .card-body .title-box h3 .icon-left, .interest-section .card.ins-1 .card-body .title-box .h3 .icon-left {
+    font-size: 2rem;
+  }
+}
+.interest-section .card.ins-1 .card-body .title-box h3 a, .interest-section .card.ins-1 .card-body .title-box .h3 a {
+  color: var(--tx-interest-card1-link);
+  text-decoration: none;
+}
+.interest-section .card.ins-1 .card-body .title-box h3 a:hover .icon-left, .interest-section .card.ins-1 .card-body .title-box .h3 a:hover .icon-left {
+  transform: translateY(-3px);
+}
+.interest-section .card.ins-2 {
+  background: var(--bg-interest-card2);
+}
+.interest-section .card.ins-2 .card-body {
+  color: var(--tx-interest-card2-body);
+  min-height: 78px;
+}
+.interest-section .card.ins-2 .card-body .title-box h3, .interest-section .card.ins-2 .card-body .title-box .h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.interest-section .card.ins-2 .card-body .title-box h3 .icon-left, .interest-section .card.ins-2 .card-body .title-box .h3 .icon-left {
+  font-size: 1.3rem;
+  transition: all 0.2s ease-in-out;
+  margin: 0 10px 0 0;
+}
+@media (min-width: 768px) {
+  .interest-section .card.ins-2 .card-body .title-box h3 .icon-left, .interest-section .card.ins-2 .card-body .title-box .h3 .icon-left {
+    font-size: 2rem;
+  }
+}
+.interest-section .card.ins-2 .card-body .title-box h3 a, .interest-section .card.ins-2 .card-body .title-box .h3 a {
+  color: var(--tx-interest-card1-link);
+  text-decoration: none;
+}
+.interest-section .card.ins-2 .card-body .title-box h3 a:hover .icon-left, .interest-section .card.ins-2 .card-body .title-box .h3 a:hover .icon-left {
+  transform: translateY(-3px);
+}
