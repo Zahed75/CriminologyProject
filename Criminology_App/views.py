@@ -29,6 +29,7 @@ def index(request):
     program = Program.objects.all()
     welcome = ChairmanMessage.objects.all()
     New_Event=NewEvent.objects.all()
+    print("hello",New_Event)
     dict = {'home': home, 'up_events': up_events, 'program': program, 'welcome': welcome, 'fc': fc,
             'New_Event': New_Event}
     return render(request, 'Criminology_App/index.html', context=dict)
