@@ -23,6 +23,7 @@ urlpatterns = [
     path('mss_syllabus/', views.mss, name='mss_syllabus'),
     path('contact/', views.Contact.as_view(), name='contact'),
     path('mphil/',views.mphil_phd,name='mphil'),
+
     # path('past_event_details/<int:pk>/',views.pastevent_details,name='past_event_details'),
 
 ]
