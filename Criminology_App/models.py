@@ -48,11 +48,11 @@ class Program(models.Model):
 
 
 class UpcomingEvents(models.Model):
-    event_title = models.TextField(max_length=400, verbose_name='write here Event tile')
-    event_date = models.CharField(max_length=20, verbose_name='put here date')
-    event_details = models.TextField(max_length=1000, verbose_name='Put here event details')
-    event_img = models.ImageField(upload_to='gallery')
-    event_file = models.FileField(upload_to='event_docx')
+    event_title = models.TextField(max_length=400, verbose_name='write here Event tile',blank=True)
+    event_date = models.CharField(max_length=20, verbose_name='put here date',blank=True)
+    event_details = models.TextField(max_length=1000, verbose_name='Put here event details',blank=True)
+    event_img = models.ImageField(upload_to='gallery',blank=True)
+    event_file = models.FileField(upload_to='event_docx',blank=True)
 
     def __str__(self):
         return self.event_title
@@ -186,9 +186,3 @@ class HeaderAndFooter(models.Model):
         return str(self.id)
 
 
-class NewsPublication(models.Model):
-    news_title = models.CharField(max_length=400)
-    news_file = models.FileField(upload_to='Pulication')
-
-    def __str__(self):
-        return self.news_title
