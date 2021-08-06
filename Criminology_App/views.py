@@ -17,7 +17,7 @@ from Criminology_App.models import (Home, About, Eventlist, Teacher_Detail,
                                     Gallery, Event_Detail, UpcomingEvents, Program,
                                     ChairmanMessage, Facilite, Facilites_details,
                                     Research_Publication, Seminar_Lab, Computer_Lab, Crime_Lab, Bss_syllabus,
-                                    Mss_syllabus, Mphil_phd, Event_Detail, New_event)
+                                    Mss_syllabus, Mphil_phd, Event_Detail, NewEvent)
 
 
 # Create your views here.
@@ -28,9 +28,9 @@ def index(request):
     up_events = UpcomingEvents.objects.all()
     program = Program.objects.all()
     welcome = ChairmanMessage.objects.all()
-    new_event = New_event.objects.all()
+    New_Event=NewEvent.objects.all()
     dict = {'home': home, 'up_events': up_events, 'program': program, 'welcome': welcome, 'fc': fc,
-            'new_event': new_event}
+            'New_Event': New_Event}
     return render(request, 'Criminology_App/index.html', context=dict)
 
 
