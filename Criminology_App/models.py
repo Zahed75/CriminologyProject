@@ -186,3 +186,11 @@ class HeaderAndFooter(models.Model):
         return str(self.id)
 
 
+
+
+class SecondEvent(models.Model):
+    event_title=models.CharField(max_length=440)
+    event_file=models.FileField(upload_to='Publication')
+
+    def __str__(self):
+        return self.event_title

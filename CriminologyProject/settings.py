@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'CriminologyProject.wsgi.application'
 #     }
 # }
 
-#
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',

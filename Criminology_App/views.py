@@ -12,26 +12,28 @@ from django.core.mail import send_mail, EmailMessage
 from django.contrib.auth.models import User
 from django.views.generic.edit import DeleteView
 from django.views import View
-from Criminology_App.models import (Home, About, Eventlist, Teacher_Detail,
-                                    TeacherList,
-                                    Gallery, Event_Detail, UpcomingEvents, Program,
-                                    ChairmanMessage, Facilite, Facilites_details,
-                                    Research_Publication, Seminar_Lab, Computer_Lab, Crime_Lab, Bss_syllabus,
-                                    Mss_syllabus, Mphil_phd, Event_Detail)
+# from Criminology_App.models import (Home, About, Eventlist, Teacher_Detail,
+#                                     TeacherList,
+#                                     Gallery, Event_Detail, UpcomingEvents, Program,
+#                                     ChairmanMessage, Facilite, Facilites_details,
+#                                     Research_Publication, Seminar_Lab, Computer_Lab, Crime_Lab, Bss_syllabus,
+#                                     Mss_syllabus, Mphil_phd, Event_Detail)
+
+from Criminology_App.models import *
 
 
 # Create your views here.
 
 def index(request):
-
     home = Home.objects.all()
     fc = Facilite.objects.all()
     up_events = UpcomingEvents.objects.all()
     program = Program.objects.all()
+    second=SecondEvent.objects.all()
     welcome = ChairmanMessage.objects.all()
 
     dict = {'home': home, 'up_events': up_events, 'program': program,
-            'welcome': welcome, 'fc': fc}
+            'welcome': welcome, 'fc': fc,'second':second}
     return render(request, 'Criminology_App/index.html', context=dict)
 
 
