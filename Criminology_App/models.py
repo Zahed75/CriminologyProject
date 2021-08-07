@@ -79,7 +79,7 @@ class Eventlist(models.Model):
 
 class Event_Detail(models.Model):
     event_title = models.ForeignKey(Eventlist, on_delete=models.CASCADE)
-    events_details = models.TextField(max_length=3000, verbose_name='Put a event details here')
+    events_details = models.TextField(max_length=300000, verbose_name='Put a event details here')
 
     def __str__(self):
         return str(self.event_title)
