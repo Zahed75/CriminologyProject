@@ -5139,10 +5139,10 @@ li:last-child {
 }
 
 
-.up_two h5{
-    text-align: center!important;
-    color:white;
-}
+/*.up_two h5{*/
+/*    text-align: center!important;*/
+/*    color:white;*/
+/*}*/
 
 #content ol li {
     list-style: circle;
