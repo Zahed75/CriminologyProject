@@ -5066,7 +5066,7 @@ li:last-child {
 
 .team-designation {
     font-size: 14px;
-    color: grey;
+    color: #ffffff;
 }
 
 .team-body a {
@@ -5393,12 +5393,18 @@ a, a:focus, a:hover {
     color: rgb(147, 147, 147);
 }
 
-.education {
-    max-width: 350px;
-    margin: 0 auto;
-    color: rgb(144, 144, 144);
-    font-weight: bold;
+/*.education {*/
+/*    max-width: 350px;*/
+/*    margin: 0 auto;*/
+/*    color: rgb(144, 144, 144);*/
+/*    font-weight: bold;*/
+/*}*/
+
+
+.teacher_dt p{
+    text-align: center;
 }
+
 
 .social {
     max-width: 300px;
