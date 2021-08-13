@@ -35,8 +35,12 @@
 
                             <div class="team-avatar"><a href="{% url 'Criminology_App:teacher_list' %}"><img
                                     src="/media/{{ x.teacher_img  }}" class="img-thumbnail" alt=""></a></div>
-                            <div class="team-name mt-4"><a href="{% url 'Criminology_App:teacher_details' pk=x.id %}"><h4>{{ x.teacher_name|safe }}</h4></a></div>
-                            <div class="team-designation"><p>{{ x.teacher_designation|safe }}</p></div>
+                            <div class=" team-name mt-4">
+                                <a href="{% url 'Criminology_App:teacher_details' pk=x.id %}">
+                                    <h4>{{ x.teacher_name|safe }}</h4>
+                                </a>
+                            </div>
+                            <div class="team-designation"><p>hello</p></div>
                             <div class="team-social-links d-flex flex-row justify-content-center">
                                 <a href="{{ x.teacher_fb }}" id="fb"><i class="fab fa-facebook-f"></i></a>
                                 <a href="{{ x.teacher_twitter }}" id="twitter"><i class="fab fa-twitter"></i></a>

@@ -5133,6 +5133,12 @@ li:last-child {
 /* main css end */
 
 
+.up_details h6 {
+    color: white;
+    text-align: center;
+}
+
+
 #content ol li {
     list-style: circle;
 
@@ -5228,7 +5234,6 @@ li:last-child {
 /*Facilites end*/
 
 
-
 /*footer start*/
 .bg-dark {
     background-color: #22252a !important;
@@ -5238,21 +5243,29 @@ li:last-child {
     margin-bottom: 0px;
     color: white;
 }
+
 svg:not(:root).svg-inline--fa {
     overflow: visible;
     color: white;
 }
 
-.footer-copyright  a{
+.footer-copyright a {
     color: white;
-}
-.page-footer h6{
-    color: whitesmoke;
     text-align: center;
 }
 
-.page-footer ,p{
+.footer-copyright p, a {
+    color: white;
     text-align: center;
+}
+
+.page-footer h6 {
+    color: whitesmoke;
+
+}
+
+.footer-page, p {
+    /*text-align: left;*/
 
 }
 
@@ -5261,6 +5274,7 @@ a, a:focus, a:hover {
     outline: 0;
     color: aliceblue;
 }
+
 /*footer end*/
 
 /*event details start*/
@@ -5270,17 +5284,19 @@ a, a:focus, a:hover {
 /*    text-align: justify;*/
 /*}*/
 
-.event_details,h4{
+.event_details, h4 {
     color: #0f9d58;
     text-align: center;
 }
+
+.team-name a h4 {
+    text-align: center;
+}
+
 /*event details end*/
 
 
-
-
-
-.team-social-links a i{
+.team-social-links a i {
     color: #0f9d58;
     background: black;
 }
@@ -5291,8 +5307,6 @@ a, a:focus, a:hover {
     padding: 10px;
     background: #0f351c;
 }
-
-
 
 
 /* ========= Card details ========= */
@@ -5336,14 +5350,14 @@ a, a:focus, a:hover {
     }
 }
 
-.facilites_info{
-    height:auto;
-    width:auto;
+.facilites_info {
+    height: auto;
+    width: auto;
 }
 
-.team-avatar img{
+.team-avatar img {
     height: 220px;
-    width:640px;
+    width: 640px;
     object-fit: cover;
 
 }
@@ -5359,6 +5373,13 @@ a, a:focus, a:hover {
     color: grey;
 }
 
+
+.team-designation p {
+    text-align: center;
+    font-size: 14px;
+}
+
+
 .team-body a {
     text-decoration: none;
     color: black;
@@ -5370,7 +5391,7 @@ a, a:focus, a:hover {
 }
 
 #fb:hover {
-    color: 	#2057c7;
+    color: #2057c7;
 }
 
 #twitter:hover {
@@ -5401,7 +5422,7 @@ a, a:focus, a:hover {
 /*}*/
 
 
-.teacher_dt p{
+.teacher_dt p {
     text-align: center;
 }
 
@@ -5421,9 +5442,15 @@ a, a:focus, a:hover {
         max-width: 200px;
     }
 }
+
 .mt-3, .my-3 {
     margin-top: 1rem !important;
     color: blanchedalmond;
+    text-align: center;
+}
+
+.resume p {
+    text-align: center;
 }
 
 /* ========= Card details ========= */
