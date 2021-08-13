@@ -5106,7 +5106,7 @@ li:last-child {
 .education {
     max-width: 350px;
     margin: 0 auto;
-    color: rgb(144, 144, 144);
+    color: white;
     font-weight: bold;
 }
 
@@ -5280,10 +5280,10 @@ a, a:focus, a:hover {
 
 
 
-/*.team-social-links a i{*/
-/*    color: #0f9d58;*/
-/*    background: black;*/
-/*}*/
+.team-social-links a i{
+    color: #0f9d58;
+    background: black;
+}
 
 
 .team-social-links a {
@@ -5292,6 +5292,61 @@ a, a:focus, a:hover {
     background: #0f351c;
 }
 
+
+
+
+/* ========= Card details ========= */
+
+.avatar img {
+    border-radius: 100%;
+}
+
+.designation {
+    max-width: 350px;
+    margin: 0 auto;
+    color: rgb(147, 147, 147);
+
+}
+
+/*.education h4 {*/
+/*    !*max-width: 350px;*!*/
+/*    margin: 0 auto;*/
+/*    color: rgb(255, 255, 255);*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*element.style {*/
+/*    color: rgb(255, 255, 255);*/
+/*    font-family: arial, sans-serif;*/
+/*}*/
+
+.social {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.social a {
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 425px) {
+    .social {
+        max-width: 200px;
+    }
+}
+
+.facilites_info{
+    height:auto;
+    width:auto;
+}
+
+.team-avatar img{
+    height: 220px;
+    width:640px;
+    object-fit: cover;
+
+}
 
 
 .team-body {
@@ -5352,7 +5407,7 @@ a, a:focus, a:hover {
 
 .social a {
     text-decoration: none;
-    color: black;
+    color: #fdfdfd;
 }
 
 @media (max-width: 425px) {
@@ -5360,16 +5415,9 @@ a, a:focus, a:hover {
         max-width: 200px;
     }
 }
-
-.facilites_info{
-    height:auto;
-    width:auto;
+.mt-3, .my-3 {
+    margin-top: 1rem !important;
+    color: blanchedalmond;
 }
 
-.team-avatar img{
-    height: 220px;
-    width:640px;
-    object-fit: cover;
-
-}
-
+/* ========= Card details ========= */
