@@ -100,7 +100,7 @@ DATABASES = {
         'NAME': 'criminol_database',
         'USER': 'criminol_criminology',
         'PASSWORD': 'zxddutcriaa5',
-        'HOST': '127.0.0.1',
+        'HOST': 'postgres',
         'PORT': '5432',
     }
 }
