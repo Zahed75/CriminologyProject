@@ -97,9 +97,9 @@ WSGI_APPLICATION = 'CriminologyProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Criminology_db',
-        'USER': 'postgres',
-        'PASSWORD': '4455',
+        'NAME': 'altshwak_database',
+        'USER': 'altshwak_criminology',
+        'PASSWORD': 'WpXwpnWS]t8F',
         'HOST': 'localhost',
         'PORT': '5432',
     }
